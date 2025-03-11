@@ -3,8 +3,6 @@ import { View, Text,Image, ScrollView, StyleSheet, TouchableOpacity, Linking } f
 import { MaterialIcons } from '@expo/vector-icons';
 import Header from '../components/Header';
 import ServiceCard from '../components/ServiceCard';
-import DiscoverCard from '../components/DiscoverCard';
-
 
 const services = [
   { title: 'Nearby Parking', icon: require('../assets/location.png') },
@@ -102,7 +100,7 @@ const HomeScreen = () => {
           <Text style={styles.title}>Discover</Text>
           <View style={styles.grid}>
             {discover.map((discover, index) => (
-            <DiscoverCard key={index} title={discover.title} icon={discover.icon} />
+            <ServiceCard key={index} title={discover.title} icon={discover.icon} />
            ))}
           </View>
         </View>
